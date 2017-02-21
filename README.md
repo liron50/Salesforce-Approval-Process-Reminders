@@ -19,8 +19,8 @@ Components:
 
 Custom objects:
 
-1. Approval Process Reminder 
-Setup for sending reminders for specific approval process
+Approval Process Reminder 
+	Setup for sending reminders for specific approval process
 
 Related Fields:
   
@@ -45,9 +45,9 @@ Buttons in Object:
 	Schedule - Schedule the job
   	Abort - Abort the schedule job from running
 
-2. Approval Process Record
-Relation for approver in specific approval. 
-This record shouldn't be created manually, it will be created and maintain by the process.
+Approval Process Record
+	Relation for approver in specific approval. 
+	This record shouldn't be created manually, it will be created and maintain by the process.
 
 Related Fields:
   
