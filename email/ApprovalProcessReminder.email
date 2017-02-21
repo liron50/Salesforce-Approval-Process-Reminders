@@ -1,0 +1,4 @@
+Hello {!Approval_Process_Record__c.Approver__c},
+Note that the following record is pending your approval for more than {!Approval_Process_Record__c.Pending Hours__c} hours.
+<br/><br/>
+<a href='{!Approval_Process_Record__c.Record_Link__c}'>Link for Record</a>
