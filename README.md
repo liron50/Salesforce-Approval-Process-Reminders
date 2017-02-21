@@ -30,7 +30,8 @@ Related Fields:
   	Reminder After (H) - After how many hours send each reminder
   	Business Hours - Lookup for Business Hours in Salesforce. This will indicate which days/hours count for this process
   	Additional Recipient 1    
-  	Additional Recipient 2 - Additional recipients for the reminders, other then the approver. Those fields can hold either 				users Id field from the relevant records or fields from the user approver. 
+  	Additional Recipient 2 - Additional recipients for the reminders, other then the approver. Those fields can hold 
+				either users Id field from the relevant records or fields from the user approver. 
                                 e.g:
 				OwnerId -->Send to the owner of the related record in the approval process
   	                        User.ManagerId-->Send to the manager of the approver
