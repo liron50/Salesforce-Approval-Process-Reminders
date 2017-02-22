@@ -15,6 +15,22 @@ external tool.
 Please refer to salesforce Schedul limits for other limitations: 
 https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_scheduler.htm
 
+
+
+Usage:
+Create new record in Approval Process Reminder, and click button schedule.
+
+Example:
+
+![Screenshot](vfPage.JPG)
+
+
+
+
+
+
+
+
 Components:
 
 Custom objects:
