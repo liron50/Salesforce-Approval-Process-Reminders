@@ -71,7 +71,7 @@ global class clsApprovalReminderUtils {
             for ( ProcessInstance pi:   [   SELECT Id, Status, TargetObjectId, LastModifiedDate, 
                                                 (SELECT Id, ActorId, StepStatus, CreatedDate FROM StepsAndWorkitems where StepStatus='Pending')
                                             FROM ProcessInstance 
-                                            where Status IN ('Pending','Hold')
+                                            where Status IN ('Pending','Hold', 'Reassigned')
                                                 and ProcessDefinition.Name = :reminderSetup.Related_Approval_Process__c]) {
                 l_processInstance.add(pi);
                   
