@@ -1,5 +1,0 @@
-<apex:page standardController="Approval_Process_Reminder__c" extensions="vf_ScheduleJobNextRun">
-
-<apex:pageMessages escape="false" />
-
-</apex:page>
