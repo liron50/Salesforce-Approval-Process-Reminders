@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
-    <available>true</available>
-    <encodingKey>ISO-8859-1</encodingKey>
-    <name>ApprovalProcessReminder</name>
-    <style>none</style>
-    <subject>Approval Process Pending Approval for more than {!Approval_Process_Record__c.Pending Hours__c} Hours</subject>
-    <type>custom</type>
-</EmailTemplate>
