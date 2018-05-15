@@ -1,0 +1,166 @@
+<apex:page sidebar="false" showHeader="false" standardStylesheets="false">
+    <head>
+        <link href="http://na1.salesforce.com/help/doc/en/help.css" rel="stylesheet" type="text/css" />
+    </head>
+    
+    <h1 class="helpHead1">Approval Process Reminders Setup Instruction</h1>
+  <p>Thanks you for using the Approval Process Reminders.</p>
+  <p>You can start by opening the Approval Process Reminders tab, click new and setup the first reminder process. Provide name, select approval process, after how
+  many hours reminder should be sent, business hour setup and the recipients.</p>
+  <p>After all setup, you go to the Approval Process Reminders tab, click go, click button Schedule Reminder Process
+  and click Schedule. The process will run every hour and will check if there are pending approval that exceeded the
+  reminder setup, and send alerts accordingly.</p>
+  
+  
+  <style>
+  /*
+  BEGIN GENERAL HTML STYLES
+*/
+body {
+    font-family: Arial, Helvetica, Verdana, sans-serif;
+    font-size: 85%;
+    margin: 10px;
+    background-color: #FFF;
+}
+
+body.helpNav {
+    margin: 0px;
+}
+
+table {
+    font-size: 100%;
+}
+
+div.p p {
+    font-size: 100%;
+}
+
+div.p, p, div.shortdesc, div.result, div.prereq, div.postreq, div.context, div.example {
+    font-size: 90%;
+    font-weight: normal;
+    margin: 1em 0 0 0;
+}
+
+div.shortdesc {
+    margin: 1em 0 1em 0;
+}
+
+div.prereq {
+    margin-top: 0;
+}
+
+div.prereq li, div.prereq div.p, div.prereq p.p, div.prereq .note, div.prereq span.ph, div.postreq li, div.postreq div.p, div.postreq p.p, div.postreq .note, div.postreq span.ph, div.example li, div.example div.p, div.example p.p, div.example .note, div.example span.ph, div.result li, div.result div.p, div.result p.p, div.result .note, div.result span.ph, div.context li, div.context div.p, div.context p.p, div.context .note, div.context span.ph, div.shortdesc li, div.shortdesc div.p, div.shortdesc p.p, div.shortdesc .note, div.shortdesc span.ph {
+    font-size: 100%;
+}
+
+div.context span.ph, div.context p.p, div.context div.p {
+    font-size: 100%;
+    font-weight: normal;
+    margin: 1em 0 0 0;
+}
+
+div.section p.p span.ph {
+    font-size: 100%;
+}
+
+.section > span.ph {
+    font-size: 90%;
+}
+
+img {
+    border: 0;
+}
+
+img.image {
+    vertical-align: text-bottom;
+}
+
+form {
+    padding: 0px;
+    margin: 0px;
+}
+
+pre {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: normal;
+    font-size: 100%;
+    color: #000000;
+    background-color: #FAFAFA;
+    border: 1px solid #CCC;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+div.p pre {
+    font-size: 110%;
+}
+
+
+
+
+
+/*
+  BEGIN HEADING STYLES
+*/
+h1, .helpHead1 {
+    font-weight: bold;
+    font-size: 120%;
+    color: #FFF;
+    background-color: #737E96;
+    padding: .7em 8px;
+    margin: 0;
+}
+
+h2, .helpHead2 {
+    font-weight: bold;
+    font-size: 100%;
+    color: #51638A;
+    line-height: 1.2em;
+    padding: 0 0 1px 0;
+    margin: 1.2em 0 .3em 0;
+    border-bottom: 1px solid #51638A;
+}
+
+h2 p, .helpHead2 p {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+h3, .helpHead3 {
+    font-weight: bold;
+    font-size: 100%;
+    color: #51638A;
+    margin: .7em 0 .7em 0;
+    padding: 0;
+}
+
+h4, .helpHead4 {
+    font-weight: bold;
+    font-size: 90%;
+    color: #51638A;
+    margin: 0.7em 0 0 0;
+    padding: 0;
+}
+
+h5, .helpHead5 {
+    font-weight: bold;
+    font-size: 85%;
+    margin: 0.7em 0 0 0;
+    padding: 0;
+}
+
+.subHead {
+    font-size: 90%;
+    background-color: #DEEDFF;
+    padding: .3em 8px;
+}
+
+.subHead p {
+    font-size: 100%;
+    margin: 0;
+    line-height: 1.4em;
+}
+
+
+  </style>
+</apex:page>

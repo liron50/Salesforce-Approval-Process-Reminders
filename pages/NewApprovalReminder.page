@@ -1,0 +1,69 @@
+<apex:page standardController="Approval_Process_Reminder__c" extensions="NewApprovalReminderController" tabStyle="Approval_Process_Reminder__c">
+
+<apex:slds />
+
+<apex:form >
+
+    <apex:pageMessages />
+    
+    <apex:sectionHeader title="{!IF(ISBLANK(approvalReminders.Name), 'New Approval Process Reminder', approvalReminders.Name)}" subtitle="Approval Process Reminder Edit"/>
+    
+    <apex:pageBlock >
+    
+        <apex:pageBlockButtons >
+            <apex:commandButton value="Save" action="{!saveRecord}" styleClass="slds-button slds-button_neutral"/>
+        
+        </apex:pageBlockButtons>
+    
+        <apex:pageBlockSection columns="1">
+        
+            <apex:inputField value="{!approvalReminders.Name}"/>
+            
+            <apex:selectList multiselect="false" size="1" value="{!approvalReminders.Related_Approval_Process__c}">
+                <apex:selectOptions value="{!approvalProcessOptions}" />
+                <apex:actionSupport event="onchange" action="{!fetchObjectUsers}"/>
+            </apex:selectList>
+            
+            <apex:inputField value="{!approvalReminders.Reminder_After__c}"/>
+            <apex:inputField value="{!approvalReminders.Business_Hours__c}"/>
+            <apex:inputField value="{!approvalReminders.Active__c}"/>
+            
+        </apex:pageBlockSection>
+    
+        <apex:pageBlockSection title="Additional Precipitants (references)" rendered="{!NOT ISBLANK(approvalReminders.Related_Object__c)}">
+        
+            <apex:selectList multiselect="false" size="1" value="{!approvalReminders.Additional_Recipient_1__c}">
+                <apex:selectOptions value="{!userOptions}"/>
+            </apex:selectList>
+            <apex:inputField value="{!approvalReminders.Alert_Recipient_1_From_Level__c}"/>
+            
+            <apex:selectList multiselect="false" size="1" value="{!approvalReminders.Additional_Recipient_2__c}">
+                <apex:selectOptions value="{!userOptions}"/>
+            </apex:selectList>
+            <apex:inputField value="{!approvalReminders.Alert_Recipient_2_From_Level__c}"/>
+            
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection title="Additional Precipitants (users)" rendered="{!NOT ISBLANK(approvalReminders.Related_Object__c)}">
+            <apex:inputField value="{!approvalReminders.Additional_Recipient_3__c}"/>
+            <apex:inputField value="{!approvalReminders.Alert_Recipient_3_From_Level__c}"/>
+            
+            <apex:inputField value="{!approvalReminders.Additional_Recipient_4__c}"/>
+            <apex:inputField value="{!approvalReminders.Alert_Recipient_4_From_Level__c}"/>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection title="Additional Precipitants (emails)" rendered="{!NOT ISBLANK(approvalReminders.Related_Object__c)}">
+            <apex:inputField value="{!approvalReminders.Additional_Recipient_5__c}"/>
+            <apex:inputField value="{!approvalReminders.Alert_Recipient_5_From_Level__c}"/>
+            
+            <apex:inputField value="{!approvalReminders.Additional_Recipient_6__c}"/>
+            <apex:inputField value="{!approvalReminders.Alert_Recipient_6_From_Level__c}"/>
+        </apex:pageBlockSection>
+        
+        <!-- Related list of record -->
+    </apex:pageBlock>
+
+</apex:form>
+
+
+</apex:page>

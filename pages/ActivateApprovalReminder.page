@@ -1,0 +1,22 @@
+<apex:page controller="ActivateApprovalReminderController" tabStyle="Approval_Process_Reminder__c">
+
+<apex:slds />
+<apex:form >
+    
+    <apex:sectionHeader title="Schedule Approval Reminder Process"/>
+    
+    <apex:pageBlock >
+    
+        <apex:pageBlockButtons location="top">
+            <apex:commandButton value="Start" action="{!activateProcess}" rendered="{!NOT isRunning }" styleClass="slds-button slds-button_neutral"/>
+            <apex:commandButton value="Stop" action="{!stopProcess}" rendered="{!isRunning}" styleClass="slds-button slds-button_neutral"/>
+        </apex:pageBlockButtons>
+        
+        <apex:pageMessages escape="false" />
+    
+    </apex:pageBlock>
+    
+    
+
+</apex:form>
+</apex:page>
