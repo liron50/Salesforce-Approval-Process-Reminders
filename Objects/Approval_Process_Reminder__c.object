@@ -18,7 +18,9 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>Edit</actionName>
-        <type>Default</type>
+        <content>NewApprovalReminder</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>Follow</actionName>
@@ -30,7 +32,9 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>New</actionName>
-        <type>Default</type>
+        <content>NewApprovalReminder</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>SaveEdit</actionName>
@@ -47,6 +51,7 @@
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
@@ -56,9 +61,18 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>Additional_Recipient_1__c</fullName>
+        <fullName>Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>Should be field name on the approval related object</inlineHelpText>
+        <label>Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Additional_Recipient_1__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
         <label>Additional Recipient 1</label>
         <length>255</length>
         <required>false</required>
@@ -68,8 +82,8 @@
     </fields>
     <fields>
         <fullName>Additional_Recipient_2__c</fullName>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>Should be field name on the approval related object</inlineHelpText>
         <label>Additional Recipient 2</label>
         <length>255</length>
         <required>false</required>
@@ -78,8 +92,55 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>Alert_Recipient_1_From_Level__c</fullName>
+        <fullName>Additional_Recipient_3__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
+        <label>Additional Recipient 3</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Approval_Process_Remiders</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Additional_Recipient_4__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Additional Recipient 4</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Approval_Process_Remiders1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Additional_Recipient_5__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Additional Recipient 5</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Additional_Recipient_6__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Additional Recipient 6</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Alert_Recipient_1_From_Level__c</fullName>
+        <defaultValue>1</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>level 1 = first alert, level 2 = second alert, and so on</inlineHelpText>
         <label>Alert Recipient 1  From Level</label>
         <precision>3</precision>
         <required>false</required>
@@ -90,7 +151,10 @@
     </fields>
     <fields>
         <fullName>Alert_Recipient_2_From_Level__c</fullName>
+        <defaultValue>1</defaultValue>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
+        <inlineHelpText>level 1 = first alert, level 2 = second alert, and so on</inlineHelpText>
         <label>Alert Recipient 2  From Level</label>
         <precision>4</precision>
         <required>false</required>
@@ -100,8 +164,65 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Alert_Recipient_3_From_Level__c</fullName>
+        <defaultValue>1</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>level 1 = first alert, level 2 = second alert, and so on</inlineHelpText>
+        <label>Alert Recipient 3 From Level</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Alert_Recipient_4_From_Level__c</fullName>
+        <defaultValue>1</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>level 1 = first alert, level 2 = second alert, and so on</inlineHelpText>
+        <label>Alert Recipient 4 From Level</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Alert_Recipient_5_From_Level__c</fullName>
+        <defaultValue>1</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>level 1 = first alert, level 2 = second alert, and so on</inlineHelpText>
+        <label>Alert Recipient 5 From Level</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Alert_Recipient_6_From_Level__c</fullName>
+        <defaultValue>1</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>level 1 = first alert, level 2 = second alert, and so on</inlineHelpText>
+        <label>Alert Recipient 6 From Level</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Business_Hours__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Business Hours</label>
         <referenceTo>BusinessHours</referenceTo>
@@ -112,6 +233,7 @@
     </fields>
     <fields>
         <fullName>Related_Approval_Process__c</fullName>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Related Approval Process</label>
         <length>255</length>
@@ -122,6 +244,7 @@
     </fields>
     <fields>
         <fullName>Related_Object__c</fullName>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Related Object</label>
         <length>255</length>
@@ -132,6 +255,7 @@
     </fields>
     <fields>
         <fullName>Reminder_After__c</fullName>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Reminder After (H)</label>
         <precision>18</precision>
@@ -152,40 +276,55 @@
         <type>Text</type>
     </nameField>
     <pluralLabel>Approval Process Remiders</pluralLabel>
-    <searchLayouts/>
+    <searchLayouts>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <listViewButtons>Schedule_Reminders_Process</listViewButtons>
+    </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Level_Cannot_be_Negative</fullName>
+        <active>true</active>
+        <errorConditionFormula>Alert_Recipient_1_From_Level__c &lt; 0
+|| Alert_Recipient_2_From_Level__c &lt; 0
+|| Alert_Recipient_3_From_Level__c &lt; 0
+|| Alert_Recipient_4_From_Level__c &lt; 0
+|| Alert_Recipient_5_From_Level__c &lt; 0
+|| Alert_Recipient_6_From_Level__c &lt; 0</errorConditionFormula>
+        <errorMessage>The Alert Level cannot be negative number</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Missing_Approval_Process</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISBLANK( Related_Approval_Process__c )
+||  Related_Approval_Process__c  == &apos;None&apos;</errorConditionFormula>
+        <errorMessage>Please select the Related Approval Process</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Missing_Business_Hour</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISBLANK( Business_Hours__c )</errorConditionFormula>
+        <errorMessage>Please setup the Business Hours</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Same_Recipients</fullName>
+        <active>true</active>
+        <errorConditionFormula>NOT ISBLANK( Additional_Recipient_1__c )
+&amp;&amp; NOT ISBLANK( Additional_Recipient_2__c )
+&amp;&amp; Additional_Recipient_1__c == Additional_Recipient_2__c</errorConditionFormula>
+        <errorMessage>Recipient 1 cannot be the same as Recipient 2</errorMessage>
+    </validationRules>
     <webLinks>
-        <fullName>Abort</fullName>
+        <fullName>Schedule_Reminders_Process</fullName>
         <availability>online</availability>
-        <displayType>button</displayType>
-        <linkType>javascript</linkType>
-        <masterLabel>Abort</masterLabel>
-        <openType>onClickJavaScript</openType>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Schedule Reminders Process</masterLabel>
+        <openType>sidebar</openType>
         <protected>false</protected>
-        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)}
-{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/apex.js&quot;)}
-
-if(confirm(&quot;Abort Process?&quot;) == true){
-var retMsg = sforce.apex.execute(&quot;clsApprovalReminderUtils&quot;,&quot;abortProcess&quot;,{approvalReminderName: &apos;{!Approval_Process_Reminder__c.Name}&apos;});
-alert(retMsg);
-location.reload();
-}</url>
-    </webLinks>
-    <webLinks>
-        <fullName>Schedule</fullName>
-        <availability>online</availability>
-        <displayType>button</displayType>
-        <linkType>javascript</linkType>
-        <masterLabel>Schedule</masterLabel>
-        <openType>onClickJavaScript</openType>
-        <protected>false</protected>
-        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)}
-{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/apex.js&quot;)}
-
-if(confirm(&quot;Schedule Process?&quot;) == true){
-var retMsg = sforce.apex.execute(&quot;clsApprovalReminderUtils&quot;,&quot;scheduleProcess&quot;,{approvalReminderName: &apos;{!Approval_Process_Reminder__c.Name}&apos;});
-alert(retMsg);
-location.reload();
-}</url>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/apex/apremn__ActivateApprovalReminder</url>
     </webLinks>
 </CustomObject>
