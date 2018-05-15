@@ -1,4 +1,0 @@
-Hello {!Approval_Process_Record__c.Approver_Name__c},
-Note that the following record is pending your approval for more than {!ROUND(Approval_Process_Record__c.Pending_Hours__c, 1)} hours.
-<br/><br/>
-<a href='{!Approval_Process_Record__c.Record_Link__c}'>Link for Record</a>
