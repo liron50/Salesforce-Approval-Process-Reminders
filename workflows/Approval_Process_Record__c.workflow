@@ -5,6 +5,14 @@
         <description>Email Alert - Approval Process Reminder</description>
         <protected>false</protected>
         <recipients>
+            <field>Additional_Recipient_5__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>Additional_Recipient_6__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
             <field>Additional_Recipient_1__c</field>
             <type>userLookup</type>
         </recipients>
@@ -13,11 +21,19 @@
             <type>userLookup</type>
         </recipients>
         <recipients>
+            <field>Additional_Recipient_3__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>Additional_Recipient_4__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
             <field>Approver__c</field>
             <type>userLookup</type>
         </recipients>
         <senderType>CurrentUser</senderType>
-        <template>unfiled$public/ApprovalProcessReminder</template>
+        <template>Approval_Process_Reminder/ApprovalProcessReminder</template>
     </alerts>
     <rules>
         <fullName>WF - Approval Process Reminder</fullName>
